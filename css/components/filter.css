@@ -1,0 +1,52 @@
+finder {
+    opacity: 0;
+    animation: var(--animation-fade-in) forwards;
+    animation-delay: 0.1s;
+}
+
+
+.filter {
+	display: grid;
+	gap: 0.5rem;
+
+	:where(.filter__search) {
+		input {
+			height: 1.5rem;
+			width: 10rem;
+		}
+
+		button {
+			appearance: none;
+			padding: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			line-height: 1;
+			margin: 0;
+			border-radius: 0;
+			&:hover,
+			&:focus {
+				background: #a7a9be;
+			}
+		}
+
+		> div {
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+
+	label {
+		font-weight: bold;
+		margin-right: 0.5rem;
+	}
+}
+
+.filter-status {
+	margin: 2rem 0;
+	font-size: 2rem;
+	font-weight: bold;
+
+	&:where(.filter-status--no-results) {
+		color: tomato;
+	}
+}

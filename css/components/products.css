@@ -1,0 +1,35 @@
+.products {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+}
+
+.product {
+	padding: 1rem;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: lightgoldenrodyellow;
+
+	&:where(.product--sale) {
+		background: tomato;
+		color: black;
+	}
+
+	:where(.product__price) {
+		color: black;
+		font-weight: bold;
+		font-family: monospace;
+		font-size: 1.2rem;
+	}
+	:where(.product__heading) {
+		color: black;
+		margin: 0;
+		font-size: 1.5rem;
+	}
+	:where(.product__image) {
+		font-size: 5rem;
+	}
+}

@@ -1,0 +1,32 @@
+.pizza {
+	width: 30rem;
+	margin-inline: auto;
+	padding: 1rem;
+	border-radius: 1rem;
+	background: rgba(208, 30, 55, 0.78);
+	font-size: 2rem;
+	accent-color: red;
+
+	:where(.pizza__header) {
+		text-align: center;
+	}
+	:where(.pizza__image) {
+		font-size: 10rem;
+	}
+
+	:where(.pizza__topping) {
+		display: block;
+		input {
+			width: 0.8em;
+			height: 0.8em;
+			margin-inline-end: 0.25em;
+			margin-block: 0.5em;
+		}
+	}
+
+	:where(.pizza__price) {
+		font-weight: bold;
+		display: block;
+		margin-block-start: 1rem;
+	}
+}
